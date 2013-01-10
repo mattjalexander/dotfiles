@@ -1,0 +1,38 @@
+# === OPTIONS ===
+# appearance
+OPTIONS=color,hilite_pet,lit_corridor,menucolors,boulder:8
+OPTIONS=showexp,showscore,time, number_pad:1
+OPTIONS=msg_window:f,sortloot=loot,disclose:+i+a+v+g+c
+# controls
+OPTIONS=autodig,!autopickup
+# names
+OPTIONS=catname:Socks,dogname:Mr. Bojanges,fruit:super crunch
+
+# === MENUCOLOR ===
+# lightcyan - good food
+# orange - cursed (or under +0)
+# yellow - not cursed
+# lightgreen - blessed
+MENUCOLOR="safe"=yellow
+MENUCOLOR="[0-9]:[0-9]"=yellow
+MENUCOLOR="\+[0-9]"=yellow
+MENUCOLOR="[Cc]ursed"=orange
+MENUCOLOR="[Uu]ncursed"=yellow
+MENUCOLOR="[Bb]lessed"=lightgreen
+MENUCOLOR="-[0-9]"=orange
+# underline objects "(wielded)", "(in quiver)", "(being worn)", ...
+MENUCOLOR="safe .* ([a-z]"=yellow,&underline
+MENUCOLOR="+[0-9] .* ([a-z]"=yellow&underline
+MENUCOLOR="[Cc]ursed .* ([a-z]"=orange&underline
+MENUCOLOR="[Uu]ncursed .* ([a-z]"=yellow&underline
+MENUCOLOR="[Bb]lessed .* ([a-z]"=lightgreen&underline
+MENUCOLOR="-[0-9] .* ([a-z]"=orange&underline
+# lightcyan - good food
+# lightgreen - lichen corpse
+# lightmagenta - lizard corpse
+MENUCOLOR="ration"=lightcyan
+MENUCOLOR="lembas wafer"=lightcyan
+MENUCOLOR="lichen corpse"=lightgreen
+MENUCOLOR="lizard corpse"=lightmagenta
+MENUCOLOR="[Kk]obold corpse"=lightred
+MENUCOLOR="[Zz]ombie corpse"=lightred
