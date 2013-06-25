@@ -2,6 +2,9 @@
 	name = Matt Alexander
 	email = mattjalexander@gmail.com
 
+[credential]
+    helper = osxkeychain
+
 [color]
   branch = auto
   diff = auto
