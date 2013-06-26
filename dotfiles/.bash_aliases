@@ -1,5 +1,7 @@
 #!/bin/bash
 
+alias less='less -R'
+
 # CDE specific aliases
 alias cde='cd ~/Projects/Corndog'
 alias config='cd ~/config'
