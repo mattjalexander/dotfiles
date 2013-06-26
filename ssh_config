@@ -1,9 +1,0 @@
-Host *
-    IdentityFile ~/.ssh/id_rsa
-
-Host github.com
-    User git
-    PubkeyAuthentication yes
-    PasswordAuthentication no
-    ForwardAgent no
-    ForwardX11 no
