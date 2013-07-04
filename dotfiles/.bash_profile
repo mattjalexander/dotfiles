@@ -182,4 +182,6 @@ __git_ps1_w() {
   fi
 }
 
-PS1='\[$(__error_ps1)\]\[$(__bg_ps1)\][\t][\u@\h][\w]\[$(__git_ps1_w)\]\$ '
+PS1='\[$(__error_ps1)\]\[$(__bg_ps1)\][\t][\u@\h][$(printf ${Blue})\w$(printf ${Color_Off})]\[$(__git_ps1_w)\]\$ '
+
+export PATH=/opt/chef/embedded/bin:/Users/mattjalexander/.rvm/gems/ruby-1.9.3-p429/bin:/Users/mattjalexander/.rvm/gems/ruby-1.9.3-p429@global/bin:/Users/mattjalexander/.rvm/rubies/ruby-1.9.3-p429/bin:/Users/mattjalexander/.rvm/bin:/opt/local/bin:/Users/mattjalexander/bin:/Users/mattjalexander/xbin:/Users/mattjalexander/Library/Haskell/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Users/mattjalexander/phantomjs/bin:/Users/mattjalexander/Library/Haskell/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
