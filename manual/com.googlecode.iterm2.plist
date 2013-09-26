@@ -259,6 +259,20 @@
 	<real>1</real>
 	<key>GlobalKeyMap</key>
 	<dict>
+		<key>0x2d-0x100000</key>
+		<dict>
+			<key>Action</key>
+			<integer>28</integer>
+			<key>Text</key>
+			<string>5A5E7325-A93A-4CC9-B96C-3C5AB84C08A8</string>
+		</dict>
+		<key>0x5c-0x100000</key>
+		<dict>
+			<key>Action</key>
+			<integer>29</integer>
+			<key>Text</key>
+			<string>5A5E7325-A93A-4CC9-B96C-3C5AB84C08A8</string>
+		</dict>
 		<key>0x9-0x40000</key>
 		<dict>
 			<key>Action</key>
@@ -269,6 +283,13 @@
 		<key>0xf700-0x300000</key>
 		<dict>
 			<key>Action</key>
+			<integer>20</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf700-0x380000</key>
+		<dict>
+			<key>Action</key>
 			<integer>7</integer>
 			<key>Text</key>
 			<string></string>
@@ -276,14 +297,21 @@
 		<key>0xf701-0x300000</key>
 		<dict>
 			<key>Action</key>
+			<integer>21</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf701-0x380000</key>
+		<dict>
+			<key>Action</key>
 			<integer>6</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf702-0x320000</key>
+		<key>0xf702-0x300000</key>
 		<dict>
 			<key>Action</key>
-			<integer>33</integer>
+			<integer>18</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -294,10 +322,10 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf703-0x320000</key>
+		<key>0xf703-0x300000</key>
 		<dict>
 			<key>Action</key>
-			<integer>34</integer>
+			<integer>19</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -408,7 +436,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>287</string>
+		<string>302</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -419,13 +447,13 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1396 81 445 270 0 0 1920 1058 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>529 308 924 485 0 0 1680 1028 </string>
+	<string>641 -684 924 485 153 -1050 1680 1050 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>768 696 384 129 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>14 607 650 451 0 0 1920 1058 </string>
+	<string>0 61 1680 961 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 12 1914 1046 0 0 1920 1058 </string>
+	<string>0 7 1912 1050 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>175 496 826 519 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -601,7 +629,7 @@
 				<real>0.091364338994026184</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
-			<true/>
+			<false/>
 			<key>Background Image Location</key>
 			<string></string>
 			<key>Blend</key>
@@ -628,7 +656,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>80</integer>
+			<integer>400</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Color</key>
@@ -1002,7 +1030,7 @@
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>25</integer>
+			<integer>100</integer>
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
@@ -1146,7 +1174,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.63826274871826172</real>
+			<real>0.074847444891929626</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -1337,7 +1365,7 @@
 			<key>Background Image Location</key>
 			<string></string>
 			<key>Blend</key>
-			<real>0.30000001192092896</real>
+			<real>1</real>
 			<key>Blink Allowed</key>
 			<false/>
 			<key>Blinking Cursor</key>
@@ -1407,7 +1435,7 @@
 				<real>0.87252241373062134</real>
 			</dict>
 			<key>Guid</key>
-			<string>6DBA698B-111F-4FA9-BEA5-E3533FC9BCDD</string>
+			<string>21668E51-D022-4809-A900-2237EA392DAA</string>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -1738,7 +1766,7 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>0</integer>
+			<integer>1000</integer>
 			<key>Scrollback With Status Bar</key>
 			<false/>
 			<key>Scrollback in Alternate Screen</key>
@@ -1878,7 +1906,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.27446839213371277</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -1967,7 +1995,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-07-03T20:24:44Z</date>
+	<date>2013-08-02T19:16:01Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
