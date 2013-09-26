@@ -150,21 +150,44 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 
-# Functions are used for PS1 primarily so the relevant section disapears if there's
-# nothing interesting to show. Note the use of printf for colors and echo to print out
-# special characters
+#
+# Warning: ridiculous[ly awesome] bash prompt follows
+#
 
- __error_ps1() {
+Off=$(tput sgr0)
+Red=$(tput setaf 1)
+Green=$(tput setaf 2)
+Yellow=$(tput setaf 3)
+Blue=$(tput setaf 4)
+Magenta=$(tput setaf 5)
+Cyan=$(tput setaf 6)
+Gray=$(tput setaf 7)
+
+__error_ps1() {
   errno=$?
+  error_len=0
   if [[ $errno -ne 0 ]]; then
-    printf "${Red}✗ << $errno >>$Color_Off"
+    error="✗ << $errno >>"
+    error_len=${#error}
+    printf $Red
+    echo -ne $error
+    printf $Off
   fi
+
+  let fillsize=${COLUMNS}-13-${error_len}
+  fill=" "
+  while [ "$fillsize" -gt "0" ]
+  do
+    fill=" ${fill}" # fill with underscores to work on
+    let fillsize=${fillsize}-1
+  done
+  echo -ne " $fill"
 }
 
- __bg_ps1() {
+__bg_ps1() {
   jobs=$(jobs)
   if [[ -n $jobs ]]; then
-    printf "${Cyan}($(jobs | wc -l))${Color_Off}"
+    printf "($(jobs | wc -l))"
   fi
 }
 
@@ -176,12 +199,17 @@ __git_ps1_w() {
   GIT_PS1_SHOWCOLORHINTS='1'
   output=$(__git_ps1 %s)
   if [[ -n ${output} ]]; then
-    printf "${Green}"
-    echo -ne "[±:${output}]"
-    printf "${Color_Off}"
+    echo "[±:${output}]"
   fi
 }
 
-PS1='\[$(__error_ps1)\]\[$(__bg_ps1)\][\t][\u@\h][$(printf ${Blue})\w$(printf ${Color_Off})]\[$(__git_ps1_w)\]\$ '
+__ps1_filler() {
+  echo $error_len
 
-export PATH=/opt/chef/embedded/bin:/Users/mattjalexander/.rvm/gems/ruby-1.9.3-p429/bin:/Users/mattjalexander/.rvm/gems/ruby-1.9.3-p429@global/bin:/Users/mattjalexander/.rvm/rubies/ruby-1.9.3-p429/bin:/Users/mattjalexander/.rvm/bin:/opt/local/bin:/Users/mattjalexander/bin:/Users/mattjalexander/xbin:/Users/mattjalexander/Library/Haskell/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Users/mattjalexander/phantomjs/bin:/Users/mattjalexander/Library/Haskell/bin:/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
+}
+
+PS1="[\u@\h][\w]"
+
+PS1='$(__error_ps1) [\t]
+'"${PS1}"'
+\[$Cyan\]$(__bg_ps1)\[$Off\]\[$Green\]$(__git_ps1_w)\[$Off\]\$ '

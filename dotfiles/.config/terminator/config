@@ -1,0 +1,57 @@
+[global_config]
+  window_state = fullscreen
+  focus = system
+  title_transmit_bg_color = "#d30102"
+[keybindings]
+  search = <Ctrl>F
+  scaled_zoom = <Ctrl><Shift>K
+  next_tab = <Primary><Shift>Right
+  split_horiz = <Ctrl>minus
+  full_screen = <Ctrl><Shift>F
+  new_window = <Ctrl>N
+  close_term = <Ctrl><Shift>W
+  split_vert = <Ctrl>backslash
+  new_tab = <Ctrl>T
+  reset_clear = <Ctrl><Shift>R
+[profiles]
+  [[default]]
+    scrollbar_position = hidden
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    login_shell = True
+    scrollback_lines = 499
+    use_system_font = False
+    cursor_color = "#eee8d5"
+    foreground_color = "#eee8d5"
+    show_titlebar = False
+    font = Monospace 12
+    background_color = "#002b36"
+    scrollback_infinite = True
+  [[solarized-dark]]
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    login_shell = True
+    use_system_font = False
+    cursor_color = "#eee8d5"
+    foreground_color = "#eee8d5"
+    show_titlebar = False
+    font = Monospace 12
+    background_color = "#002b36"
+  [[solarized-light]]
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    login_shell = True
+    use_system_font = False
+    cursor_color = "#002b36"
+    foreground_color = "#002b36"
+    show_titlebar = False
+    font = Monospace 12
+    background_color = "#eee8d5"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = solarized-dark
+    [[[window0]]]
+      type = Window
+      parent = ""
+      profile = solarized-dark
+[plugins]
