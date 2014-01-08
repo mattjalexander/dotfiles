@@ -415,51 +415,22 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
-	<key>NSColorPanelMode</key>
-	<string>6</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/src</string>
+	<string>~/src/mattjalexander/dotfiles/manual</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
-	<key>NSTableView Columns KeyBingingTable</key>
-	<array>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATCG
-		</data>
-		<string>198</string>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATGG
-		</data>
-		<string>302</string>
-	</array>
-	<key>NSTableView Hidden Columns KeyBingingTable</key>
-	<array/>
-	<key>NSTableView Sort Ordering KeyBingingTable</key>
-	<array/>
-	<key>NSWindow Frame NSColorPanel</key>
-	<string>464 -698 214 309 97 -1050 1680 1050 </string>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>1396 81 445 270 0 0 1920 1058 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>641 -684 924 485 153 -1050 1680 1050 </string>
-	<key>NSWindow Frame SUStatusFrame</key>
-	<string>768 696 384 129 0 0 1920 1058 </string>
+	<string>269 110 924 485 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 61 1680 961 0 0 1680 1028 </string>
+	<string>2172 34 1210 1046 1920 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 7 1912 1050 0 0 1920 1058 </string>
+	<string>1368 -568 1210 536 1327 -800 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>175 496 826 519 0 0 1920 1058 </string>
-	<key>NSWindow Frame iTerm Window 3</key>
-	<string>0 6 1914 1046 0 0 1920 1058 </string>
-	<key>NSWindow Frame iTerm Window 4</key>
-	<string>0 12 1914 1046 0 0 1920 1058 </string>
+	<string>1389 -646 810 536 1327 -800 1280 800 </string>
 	<key>NeverWarnAboutShortLivedSessions_5A5E7325-A93A-4CC9-B96C-3C5AB84C08A8</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -656,7 +627,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>400</integer>
+			<integer>100</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Color</key>
@@ -1030,7 +1001,7 @@
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>100</integer>
+			<integer>30</integer>
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
@@ -1977,7 +1948,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/mattjalexander/src/mattjalexander/dotfiles/manual/</string>
+	<string>/Users/mattalex/src/mattjalexander/dotfiles/manual</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -1995,7 +1966,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-08-02T19:16:01Z</date>
+	<date>2014-01-07T21:42:10Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -2039,6 +2010,6 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>1.0.0.20130624</string>
+	<string>1.0.0.20130622</string>
 </dict>
 </plist>

@@ -1,0 +1,87 @@
+[submodule "dotfiles/lib/git-flow-completion"]
+  path = dotfiles/lib/git-flow-completion
+  url = https://github.com/bobthecow/git-flow-completion.git
+[submodule "dotfiles/.vim/bundle/vim-pathogen"]
+        path = dotfiles/.vim/bundle/vim-pathogen
+        url = https://github.com/tpope/vim-pathogen.git
+[submodule "dotfiles/.vim/bundle/syntastic"]
+        path = dotfiles/.vim/bundle/syntastic
+        url = https://github.com/scrooloose/syntastic.git
+[submodule "dotfiles/.vim/bundle/HTML-AutoCloseTag"]
+        path = dotfiles/.vim/bundle/HTML-AutoCloseTag
+        url = https://github.com/vim-scripts/HTML-AutoCloseTag
+[submodule "dotfiles/.vim/bundle/molokai"]
+        path = dotfiles/.vim/bundle/molokai
+        url = https://github.com/tomasr/molokai
+[submodule "dotfiles/.vim/bundle/nerdtree"]
+        path = dotfiles/.vim/bundle/nerdtree
+        url = https://github.com/scrooloose/nerdtree
+[submodule "dotfiles/.vim/bundle/supertab"]
+        path = dotfiles/.vim/bundle/supertab
+        url = https://github.com/ervandew/supertab
+[submodule "dotfiles/.vim/bundle/tabular"]
+        path = dotfiles/.vim/bundle/tabular
+        url = https://github.com/godlygeek/tabular
+[submodule "dotfiles/.vim/bundle/vim-blockle"]
+        path = dotfiles/.vim/bundle/vim-blockle
+        url = https://github.com/jgdavey/vim-blockle
+[submodule "dotfiles/.vim/bundle/vim-coffee-script"]
+        path = dotfiles/.vim/bundle/vim-coffee-script
+        url = https://github.com/kchmck/vim-coffee-script
+[submodule "dotfiles/.vim/bundle/vim-commentary"]
+        path = dotfiles/.vim/bundle/vim-commentary
+        url = https://github.com/tpope/vim-commentary
+[submodule "dotfiles/.vim/bundle/vim-cucumber"]
+        path = dotfiles/.vim/bundle/vim-cucumber
+        url = https://github.com/tpope/vim-cucumber
+[submodule "dotfiles/.vim/bundle/vim-easymotion"]
+        path = dotfiles/.vim/bundle/vim-easymotion
+        url = https://github.com/Lokaltog/vim-easymotion
+[submodule "dotfiles/.vim/bundle/vim-endwise"]
+      path = dotfiles/.vim/bundle/vim-endwise
+      url = https://github.com/tpope/vim-endwise
+[submodule "dotfiles/.vim/bundle/vim-fugitive"]
+      path = dotfiles/.vim/bundle/vim-fugitive
+      url = https://github.com/tpope/vim-fugitive
+[submodule "dotfiles/.vim/bundle/vim-autoclose"]
+      path = dotfiles/.vim/bundle/vim-autoclose
+      url = https://github.com/Townk/vim-autoclose
+[submodule "dotfiles/.vim/bundle/vim-haml"]
+      path = dotfiles/.vim/bundle/vim-haml
+      url = https://github.com/tpope/vim-haml
+[submodule "dotfiles/.vim/bundle/vim-javascript"]
+      path = dotfiles/.vim/bundle/vim-javascript
+      url = https://github.com/vim-scripts/vim-javascript
+[submodule "dotfiles/.vim/bundle/vim-jst"]
+      path = dotfiles/.vim/bundle/vim-jst
+      url = https://github.com/briancollins/vim-jst
+[submodule "dotfiles/.vim/bundle/vim-rails"]
+      path = dotfiles/.vim/bundle/vim-rails
+      url = https://github.com/tpope/vim-rails
+[submodule "dotfiles/.vim/bundle/vim-rubocop"]
+      path = dotfiles/.vim/bundle/vim-rubocop
+      url = https://github.com/ngmy/vim-rubocop
+[submodule "dotfiles/.vim/bundle/vim-ruby"]
+      path = dotfiles/.vim/bundle/vim-ruby
+      url = https://github.com/vim-ruby/vim-ruby
+[submodule "dotfiles/.vim/bundle/vim-surround"]
+      path = dotfiles/.vim/bundle/vim-surround
+      url = https://github.com/tpope/vim-surround
+[submodule "dotfiles/.vim/bundle/vim-visual-star-search"]
+      path = dotfiles/.vim/bundle/vim-visual-star-search
+      url = https://github.com/nelstrom/vim-visual-star-search
+[submodule "dotfiles/.vim/bundle/vundle"]
+      path = dotfiles/.vim/bundle/vundle
+      url =  https://github.com/gmarik/vundle
+[submodule "dotfiles/.vim/bundle/ag.vim"]
+      path = dotfiles/.vim/bundle/ag.vim
+      url = https://github.com/rking/ag.vim
+[submodule "dotfiles/.vim/bundle/ctrlp.vim"]
+        path = dotfiles/.vim/bundle/ctrlp.vim
+        url = https://github.com/kien/ctrlp.vim
+[submodule "dotfiles/.vim/bundle/vim-indent-guides"]
+      path = dotfiles/.vim/bundle/vim-indent-guides
+      url = https://github.com/nathanaelkane/vim-indent-guides
+[submodule "dotfiles/.vim/bundle/vim-rspec"]
+      path = dotfiles/.vim/bundle/vim-rspec
+      url = https://github.com/thoughtbot/vim-rspec
