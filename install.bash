@@ -4,10 +4,10 @@ git submodule init
 git submodule update
 
 rm -rf ~/.oh-my-zsh
-$(pwd)/dotfiles/oh-my-zsh/tools/install.sh &
+$(pwd)/oh-my-zsh/tools/install.sh &
 mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
 
-sleep 2
+sleep 6
 
 echo "Backing up current configs ... "
 mkdir -p ~/.backup
@@ -31,7 +31,7 @@ for file in $(pwd)/dotfiles/.*; do
   fi
 
   echo "Installing $basefile"
-  rsync -a $file ~/$basefile
+  rsync -a $file ~
 done
 
 for file in $(pwd)/dotfiles/*; do
@@ -46,8 +46,10 @@ for file in $(pwd)/dotfiles/*; do
   fi
 
   echo "Installing $basefile"
-  rsync -a $file ~/$basefile
+  rsync -a $file ~
 done
 
 # rsync -a would clobber the .oh-zsh installation.
 mv ~/matt-eastwood.zsh-theme ~/.oh-my-zsh/themes/
+
+. ~/.zshrc
