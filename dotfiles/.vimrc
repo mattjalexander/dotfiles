@@ -93,8 +93,8 @@ set autoindent
 
 " Convert tabs to spaces, use 2 spaces in place of tabs.
 set expandtab
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 
 " text search options
 set hlsearch
@@ -121,12 +121,6 @@ set wildmode=list:longest
 
 " Show line numbers
 set number
-
-" Make clipbord work on OS X. This makes copy/paste operations trivial between
-" vim and other applications since they all use the same clipboard now.
-set clipboard=unnamed
-" visual select automatically copies to X11's selection ("middle click") buffer
-set go+=a
 
 " scrolls the buffer before you reach the last line of the window
 set scrolloff=3

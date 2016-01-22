@@ -14,13 +14,13 @@ for file in $(pwd)/dotfiles/.*; do
 
   # just remove symlinks
   if [[ -L ~/$basefile ]]; then
-    rm ~/$basefile
+    rm -f ~/$basefile
   else
     # back up current dotfiles
-    mv ~/$basefile ~/.backup/
+    mv -U ~/$basefile ~/.backup/ 2>/dev/null
   fi
 
-  ln -s $file ~/$basefile
+  cp -a $file ~/$basefile
 done
 
 for file in $(pwd)/dotfiles/*; do
@@ -28,10 +28,10 @@ for file in $(pwd)/dotfiles/*; do
 
   # just remove symlinks
   if [[ -L ~/$basfile ]]; then
-    rm ~/$basefile
+    rm -f ~/$basefile
   else
     # back up current dotfiles
-    mv ~/$basefile ~/.backup/
+    mv -U ~/$basefile ~/.backup/ 2>/dev/null
   fi
 
   ln -s $file ~/$basefile
