@@ -4,8 +4,14 @@ git submodule init
 git submodule update
 
 rm -rf ~/.oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+$(pwd)/dotfiles/oh-my-zsh/tools/install.sh &
+mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
 
+sleep 2
+
+cp -a dotfiles/.oh-my-zsh/custom/matt-eastwood.zsh-theme ~/.oh-my-zsh/themes
+
+echo "Backing up current configs ... "
 mkdir -p ~/.backup
 
 for file in $(pwd)/dotfiles/.*; do
@@ -26,7 +32,8 @@ for file in $(pwd)/dotfiles/.*; do
     mv -U ~/$basefile ~/.backup/ 2>/dev/null
   fi
 
-  cp -a $file ~/$basefile
+  echo "Installing $basefile"
+  rsync -a $file ~/$basefile
 done
 
 for file in $(pwd)/dotfiles/*; do
@@ -40,5 +47,6 @@ for file in $(pwd)/dotfiles/*; do
     mv -U ~/$basefile ~/.backup/ 2>/dev/null
   fi
 
-  cp -a $file ~/$basefile
+  echo "Installing $basefile"
+  rsync -a $file ~/$basefile
 done
