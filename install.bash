@@ -3,6 +3,8 @@
 git submodule init
 git submodule update
 
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 mkdir -p ~/.backup
 
 for file in $(pwd)/dotfiles/.*; do
