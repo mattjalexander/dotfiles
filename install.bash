@@ -48,3 +48,6 @@ for file in $(pwd)/dotfiles/*; do
   echo "Installing $basefile"
   rsync -a $file ~/$basefile
 done
+
+# rsync -a would clobber the .oh-zsh installation.
+mv ~/matt-eastwood.zsh-theme ~/.oh-my-zsh/themes/
