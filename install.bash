@@ -1,5 +1,8 @@
 #!/bin/bash
 
+git submodule init
+git submodule update
+
 mkdir -p ~/.backup
 
 for file in $(pwd)/dotfiles/.*; do
@@ -34,5 +37,5 @@ for file in $(pwd)/dotfiles/*; do
     mv -U ~/$basefile ~/.backup/ 2>/dev/null
   fi
 
-  ln -s $file ~/$basefile
+  cp -a $file ~/$basefile
 done
