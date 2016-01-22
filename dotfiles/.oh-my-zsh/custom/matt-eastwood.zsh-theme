@@ -1,14 +1,13 @@
-# RVM settings
-if [[ -s ~/.rvm/scripts/rvm && -n $(~/.rvm/bin/rvm-prompt) ]] ; then
-  RPS1="%{$fg[yellow]%}rvm:%{$reset_color%}%{$fg[red]%}\$(~/.rvm/bin/rvm-prompt)%{$reset_color%} $EPS1"
-else
-  if which rbenv &> /dev/null; then
-    RPS1="%{$fg[yellow]%}rbenv:%{$reset_color%}%{$fg[red]%}\$(rbenv version | sed -e 's/ (set.*$//')%{$reset_color%} $EPS1"
-  fi
-fi
-
-
-
+# right hand prompt:
+RPS1="%{$fg_bold[black]%}%T%{$reset_color%}"
+# RVM/rbenv if they exist and date
+#if [[ -s ~/.rvm/scripts/rvm && $(~/.rvm/bin/rvm-prompt) != '' ]] ; then
+#  RPS1="%{$fg[yellow]%}💎 :%{$reset_color%}%{$fg[red]%}\$(~/.rvm/bin/rvm-prompt)%{$reset_color%} $RPS1 $EPS1"
+#else
+#  if which rbenv &> /dev/null; then
+#    RPS1="%{$fg[yellow]%}💎 :%{$reset_color%}%{$fg[red]%}\$(rbenv version | sed -e 's/ (set.*$//')%{$reset_color%} $RPS1 $EPS1"
+#  fi
+#fi
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[green]%}["
 ZSH_THEME_GIT_PROMPT_SUFFIX="]%{$reset_color%}"
@@ -25,22 +24,31 @@ git_custom_status() {
 
 # detects host type
 prompt_host() {
-  if [[ $(uname) == 'Darwin' ]]; then echo "[]"; fi
+  RETVAL=$?
+  if [[ $RETVAL -eq 0 ]]; then                                          # ┬─┬ノ(º_ºノ)
+    if [[ $(uname) == 'Darwin' ]]; then
+        echo ""
+    elif [[ $(hostname | cut -d\. -f2) == "desktop" ]]; then
+        echo "🚪 "
+    elif [[ -n $(hostname | grep ^dev-dsk) ]]; then
+        echo "%{$fg_bold[yellow]%}⚡%{$reset_color%}"
+    else
+        echo "?"
+    fi
+  else                                                                  # (╯°□°）╯︵ ┻━┻
+    echo "%{$fg[red]%}✘ $RETVAL%{$reset_color%} "
+  fi
+
 }
 
 # mostly snagged from agnoster theme
 prompt_status() {
-  RETVAL=$?
-  JOBS=$(jobs -l | wc -l)
-  local symbols
-  symbols=()
+  myjobs=$(jobs -l | wc -l | awk '{print $1}')
 
-  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}✘ $RETVAL"
-  [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡"
-  [[ $JOBS -gt 0 ]] && symbols+="%{%F{cyan}%}[⚙]"
-
+  [[ $myjobs -gt 0 ]] && symbols+="%{%F{cyan}%}(⚙ $myjobs)"
+  [[ $UID -eq 0 ]]  && symbols+="%{%F{yellow}%}⚡"
   echo "$symbols%{$reset_color%}"
+
 }
 
-PROMPT='$(prompt_status)$(prompt_host)$(git_custom_status)%{$fg[cyan]%}[%~% ]%{$reset_color%}%B$%b '
-RPS1='$RPS %{$fg_bold[black]%}%T%{$reset_color%}'
+PROMPT='$(prompt_host)$(git_custom_status)%{$fg[blue]%}[%~% ]$(prompt_status)%{$reset_color%}%B$%b '
