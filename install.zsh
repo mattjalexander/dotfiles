@@ -9,7 +9,6 @@ mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
 
 sleep 6
 
-echo "Backing up current configs ... "
 mkdir -p ~/.backup
 
 for file in $(pwd)/dotfiles/.*; do
@@ -30,7 +29,6 @@ for file in $(pwd)/dotfiles/.*; do
     mv ~/$basefile ~/.backup/ 2>/dev/null
   fi
 
-  echo "Installing $basefile"
   rsync -a $file ~
 done
 
@@ -45,7 +43,6 @@ for file in $(pwd)/dotfiles/*; do
     mv ~/$basefile ~/.backup/ 2>/dev/null
   fi
 
-  echo "Installing $basefile"
   rsync -a $file ~
 done
 
