@@ -9,8 +9,6 @@ mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
 
 sleep 2
 
-cp -a dotfiles/.oh-my-zsh/custom/matt-eastwood.zsh-theme ~/.oh-my-zsh/themes
-
 echo "Backing up current configs ... "
 mkdir -p ~/.backup
 
@@ -29,7 +27,7 @@ for file in $(pwd)/dotfiles/.*; do
     rm -f ~/$basefile
   else
     # back up current dotfiles
-    mv -U ~/$basefile ~/.backup/ 2>/dev/null
+    mv ~/$basefile ~/.backup/ 2>/dev/null
   fi
 
   echo "Installing $basefile"
@@ -44,7 +42,7 @@ for file in $(pwd)/dotfiles/*; do
     rm -f ~/$basefile
   else
     # back up current dotfiles
-    mv -U ~/$basefile ~/.backup/ 2>/dev/null
+    mv ~/$basefile ~/.backup/ 2>/dev/null
   fi
 
   echo "Installing $basefile"
